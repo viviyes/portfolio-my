@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-light-hover: #fcf4ff;
+  --color-light-gray: #fdfaff;
+  --color-light-purple: #faeff9;
+  --color-light-purple-2: #84788f;
+  --color-light-workBtn: #eadaed;
+  --color-dark-workBtn: #4c3e59;
+  --color-dark-workBtn-shadow: #8d819c;
+  --color-dark-workBtn-hover: #2b1c38;
+  --color-dark-hover: #2a004a;
+  --color-dark-description-tag: #62566e;  /*62566e*/
+  --color-dark-theme: #11001f;
+  --color-text-active: #857761;
+  --font-outfit: "Outfit", "sans-serif";
+  --font-ovo: "Ovo", "serif";
+  
+
+  /* custom box shadows */
+  --shadow-gray: 4px 4px 0 #d2d2d2;
+  --shadow-white: 4px 4px 0 #fff;
+}
+
+*{
+  font-family: var(--font-outfit);
+}
+
+html { 
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* 防止固定定位或变换导致的全局横向滚动（移动端 Safari 常见） */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1660px) {
+  /* html { font-size: 22px; } */
+}
+
+
+/* 导航栏高度控制 */
+@media (min-width: 1280px) {
+  nav {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  nav ul {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+@utility grid-cols-auto {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-auto-rows: repeat(auto-fit, minmax(450px, 1fr)); */
+}
+@utility grid-tools-bar-auto {
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-auto-rows: repeat(auto-fit, minmax(100px, 1fr));
+}
+@utility grid-tools-btn-auto {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: repeat(auto-fit, minmax(50px, 1fr));
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
