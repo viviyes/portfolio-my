@@ -1,0 +1,74 @@
+name: Deploy to S3 + CloudFront + Cloudflare
+
+on:
+  push:
+    branches:
+      - main  
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # 2. setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "my-app/package-lock.json"
+      
+      # 3. install dependencies
+      - name: Install dependencies
+        working-directory: ./my-app
+        run: npm ci
+      
+      # 4. build Next.js app
+      - name: Build Next.js app
+        working-directory: ./my-app
+        run: npm run build
+      
+      # 5. configure AWS credentials
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      # 6. sync files to S3
+      - name: Sync files to S3
+        working-directory: ./my-app
+        run: |
+          aws s3 sync out/ s3://${{ secrets.S3_BUCKET }}/ \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "*.txt"
+          
+          # HTML 文件使用较短的缓存时间
+          aws s3 sync out/ s3://${{ secrets.S3_BUCKET }}/ \
+            --exclude "*" \
+            --include "*.html" \
+            --include "*.txt" \
+            --cache-control "public, max-age=0, must-revalidate"
+      
+      # 7. invalidate CloudFront cache
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+      
+      # 8. deployment complete notification
+      - name: Deployment complete
+        run: |
+          echo "✅ Deployment successful!"
+          echo "S3 Bucket: ${{ secrets.S3_BUCKET }}"
+          echo "CloudFront Distribution: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}"
+
