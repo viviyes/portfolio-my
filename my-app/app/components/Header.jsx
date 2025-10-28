@@ -13,7 +13,7 @@ const Header = ({ isDarkMode }) => {
       >
         <div className="w-32 h-32 rounded-full overflow-hidden">
           <Image
-            src={assets.user_image}
+            src={isDarkMode ? assets.user_image_dark : assets.user_image}
             alt=""
             className="w-full h-full object-cover object-[50%_20%]"
           />

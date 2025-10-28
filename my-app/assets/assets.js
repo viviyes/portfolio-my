@@ -1,4 +1,5 @@
 import user_image from './user-image.png';
+import user_image_dark from './user-image-bgblack.png';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
 import edu_icon from './edu-icon.png';
@@ -81,6 +82,7 @@ import clickDarkLogo from './click-dark-logo.png';
 
 export const assets = {
     user_image,
+    user_image_dark,
     code_icon,
     code_icon_dark,
     edu_icon,
