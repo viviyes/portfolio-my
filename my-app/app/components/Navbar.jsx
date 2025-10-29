@@ -82,7 +82,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </li>
           <li>
             <a className={getLinkClassName("contact")} href="#contact">
-              Contect me
+              Contact me
             </a>
           </li>
         </ul>
@@ -176,7 +176,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               onClick={closeMenu}
               href="#contact"
             >
-              Contect me
+              Contact me
             </a>
           </li>
         </ul>
