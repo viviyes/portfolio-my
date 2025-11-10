@@ -173,19 +173,19 @@ export const workData = [
         title: 'Full-stack Inventory Management',
         description: ['React', 'Next', 'TypeScript', 'Tailwind', 'Node', 'Express', 'PostgreSQL', 'AWS'],
         bgImage: '/work_manag_pic.png',
-        link: 'https://www.baidu.com',
+        link: 'https://stockmngt.vivicoding.com',
     },
     {
         title: 'Frontend Smart Park System',
         description: ['React', 'TypeScript', 'react-router', 'Redux', 'Antd', 'Saas', 'Mock.js'],
         bgImage: '/work_smartPark_pic.png',
-        link: 'https://www.baidu.com',
+        link: 'https://parkmngt.vivicoding.com',
     },
     {
         title: 'Frontend Amazon clone',
         description: ['HTML', 'CSS', 'JavaScript'],
         bgImage: '/work_amazon_pic2.png',
-        link: 'https://www.baidu.com',
+        link: 'https://amazonclone.vivicoding.com',
     },
 
 ]
