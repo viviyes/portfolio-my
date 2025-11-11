@@ -21,7 +21,7 @@ const Education = ({isDarkMode}) => {
                 <motion.div initial={{ opacity:0 }} whileInView={{ opacity:1 }} transition={{ duration: 0.6, delay:0.8 }}
                 className='flex-1'>
                     <p className='mb-10 max-w-2xl font-ovo'>
-                        I develop full-stack applications, connecting back-end logic with responsive front-end design. From setting up databases and APIs to getting projects live on the cloud, I aim to deliver seamless performance and user-friendly interfaces that make every interaction feel effortless. I bring both hands-on project experience and real-world development work from my time in industry.
+                        I develop full-stack applications that combine solid back-end logic with responsive front-end design. I integrate AI capabilities through model APIs, fine-tuning, and A/B testing to optimise performance in real scenarios. From databases and APIs to cloud deployment, my workflow is supported by automated CI/CD pipelines using Docker and GitHub Actions, ensuring reliable delivery. I bring hands-on project experience and real industry development background.
                     </p>
                     <motion.ul initial={{ opacity:0 }} whileInView={{ opacity:1 }} transition={{ duration: 0.8, delay:1 }}
                     className='grid grid-cols-1 sm:grid-cols-1 gap-6 max-w-2xl'>

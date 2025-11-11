@@ -198,9 +198,9 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Tech Stack', description: 'HTML, CSS, tailwind, JavaScript, ES6, TypeScript, React, Redux, Vue, Next, Node, Express, C#, .NET, PostgreSQL, MySQL, MongoDB, AWS' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Tech Stack', description: 'Node, Express, C#, .NET, React, Redux, Vue, Next, TypeScript, JavaScript, ES6,  HTML, CSS, tailwind, PostgreSQL, MySQL, MongoDB, AWS, CI/CD ' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Master of Information Technology, UNSW' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'built solid full-time development experience working in Sydney' }
 ];
 
 export const toolsTabs = [

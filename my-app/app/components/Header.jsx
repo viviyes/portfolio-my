@@ -47,7 +47,7 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-4xl font-ovo"
       >
-        Full stack developer based in Sydney.
+        Full-stack & AI developer based in Sydney.
       </motion.h1>
       <motion.p
         initial={{ opacity: 0 }}
@@ -55,8 +55,7 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-ovo"
       >
-        I turn ideas into full-stack applications, connecting robust back-end
-        logic with beautiful, responsive interfaces.
+        I turn ideas into full-stack, AI-powered applications—connecting robust back-end logic, responsive interfaces, and automated CI/CD pipelines for smooth, reliable deployments.
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
