@@ -165,13 +165,13 @@ export const assets = {
 export const workData = [
     {
         title: 'Full-stack AI interview assistant',
-        description: ['Google Gemini', 'openai', 'MERN Stack', 'mongodb', 'express', 'React', 'nodejs', 'tailwind', 'JWT', 'bcryptjs'],
+        description: ['Google Gemini', 'openai', 'MERN Stack', 'mongodb', 'express', 'React', 'nodejs', 'tailwind', 'JWT', 'bcryptjs','CI/CD'],
         bgImage: '/work_ai_pic.png',
         link: 'https://interviewai.vivicoding.com',
     },
     {
         title: 'Full-stack Inventory Management',
-        description: ['React', 'Next', 'TypeScript', 'Tailwind', 'Node', 'Express', 'PostgreSQL', 'AWS'],
+        description: ['React', 'Next', 'TypeScript', 'Tailwind', 'Node', 'Express', 'PostgreSQL','Neon', 'AWS'],
         bgImage: '/work_manag_pic.png',
         link: 'https://stockmngt.vivicoding.com',
     },
@@ -200,7 +200,7 @@ export const serviceData = [
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Tech Stack', description: 'Node, Express, C#, .NET, React, Redux, Vue, Next, TypeScript, JavaScript, ES6,  HTML, CSS, tailwind, PostgreSQL, MySQL, MongoDB, AWS, CI/CD ' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'Master of Information Technology, UNSW' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'built solid full-time development experience working in Sydney' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Works', description: 'built solid full-time development experience working in Sydney' }
 ];
 
 export const toolsTabs = [
